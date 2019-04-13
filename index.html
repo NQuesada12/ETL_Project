@@ -20,20 +20,22 @@
     <section id="main-bio">
       <section id="figure">
         <h2 id="bio-name">Analysis</h2>
-        <img id="bio-image" src="SQL_Results_Grid.png">
+        <img id="bio-image" src="ETL_Bar_Chart.png">
       </section>
-      <p>Our project's purpose was to examine if there were any links between traffic camera locations and traffic incidents in Austin, Texas. We found two datasets that provided us with traffic camera locations and traffic incidents; utilizing this data we sought to find if there is an effect on traffic incidents and traffic cameras.</p>
+      <p>Our project's purpose was to examine if there were any links between traffic camera locations and traffic incidents in Austin, Texas. We found two datasets that provided us with traffic camera locations and traffic incidents; the traffic camera info was provided by the City of Austin Transportation Department and the traffic incident info is provided by the Austin-Travis County traffic reports RSS feed. Utilizing this data, we sought to find if traffic cameras have an effect on traffic incidents (increase, decrease, or stay the same) when they are activated.</p>
     </section>
 
     <aside id="contact-info">
-      <h2>Contact Info</h2>
+      <h2>ETL Results</h2>
       <ul>
-        <li><strong>Email:</strong> <a href="#">someplace@gmail.com</a></li>
-        <li><strong>Github:</strong> <a href="#">sampleName</a></li>
-        <li><strong>Portfolio:</strong> <a href="#">coming soon</a></li>
+        <li><strong>Extract:</strong> <p>We found our traffic camera and traffic incident data from data.world; this provided us with a large amount of data relating to what our project was investigating.</p>
+        <li><strong>Transform:</strong> <p>In order to clean our data we had to go through the files and delete apostrophes that were affecting our location coordinates as well as drop some lines that were blank or duplicated.
+        <li><strong>Load:</strong> <p>We exported our dataframes to SQL in order to merge the two sets of data together so we could have the info for both tables on one table. </p>
       </ul>
+      <p>Based on the analysis of our data we created a graph showing the number of incidents per camera. The x-axis is the locations of the cameras and the y-axis is the number of incidents. The chart shows that some locations had a higher rate of incidents, but we were unable to determine the reason for this. If we had more time we could've gone further to determine the effect the traffic cameras have on traffic incidents and any type of benefit or detriment to having the cameras. Also, we could've created a heatmap to better display which camera locations had more incidents/activity in order to be able to determine if it was necessary to add more oversight or find better ways to manage traffic.</p>
     </aside>
-  </main>
+    
+    </main>
 
 </body>
 
